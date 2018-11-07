@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             company,
             notes,
             twitter,
-        } = addContactForm.nextElementSibling
+        } = addContactForm.elements
 
         const contact = {
             id: Date.now(),
