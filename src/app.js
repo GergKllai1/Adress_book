@@ -12,7 +12,7 @@ const renderContacts = () => {
                 li.innerHTML = `
                 <div>
                     <div class="w-64 rounded overflow-hidden shadow-lg">
-                        <img class="w-full" src="./images/male.jpg" alt="Profile picture">
+                        <img class="w-full" src="./images/man-grey.png" alt="Profile picture">
                         <div class="px-6 py-4 ">
                             <h1> ${contact.name} </h1>
                             <h3> ${contact.gender} </h3>
@@ -28,7 +28,7 @@ const renderContacts = () => {
                     li.innerHTML = `
                     <div>
                         <div class="w-64 rounded overflow-hidden shadow-lg">
-                            <img class="w-full" src="./images/female.jpg" alt="Profile picture">
+                            <img class="w-full" src="./images/woman-grey.png" alt="Profile picture">
                             <div class="px-6 py-4 ">
                                 <h1> ${contact.name} </h1>
                                 <h3> ${contact.gender} </h3>
