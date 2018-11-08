@@ -10,10 +10,10 @@ const renderContacts = () => {
             let li = document.createElement('p')
             if(contact.gender == 'male'){
                 li.innerHTML = `
-                <div class:"w-1/4 h-1/4">
-                    <div class="max-w-xs rounded overflow-hidden shadow-lg">
-                        <img class="w-full" src="./images/image1.png" alt="Profile picture">
-                        <div class="px-6 py-4 flex items-center justify-center">
+                <div>
+                    <div class="w-64 rounded overflow-hidden shadow-lg">
+                        <img class="w-full" src="./images/image1.jpg" alt="Profile picture">
+                        <div class="px-6 py-4 ">
                             <h1> ${contact.name} </h1>
                             <h3> ${contact.gender} </h3>
                             <h2> ${contact.company} </h2>
@@ -26,9 +26,9 @@ const renderContacts = () => {
                 `
             } else if ( contact.gender == "female" ) {
                     li.innerHTML = `
-                    <div class:"w-1/4 h-1/4">
-                        <div class="max-w-xs rounded overflow-hidden shadow-lg">
-                            <img class="w-full" src="./images/image2.png" alt="Profile picture">
+                    <div>
+                        <div class="w-64 rounded overflow-hidden shadow-lg">
+                            <img class="w-full" src="./images/image2.jpg" alt="Profile picture">
                             <div class="px-6 py-4 ">
                                 <h1> ${contact.name} </h1>
                                 <h3> ${contact.gender} </h3>
