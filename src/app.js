@@ -5,45 +5,43 @@ const renderContacts = () => {
 
     if(contacts){
         div.innerHTML = ''
-        const ul = document.createElement('p')
         contacts.forEach(contact => {
-            let li = document.createElement('p')
+            let p = document.createElement('p')
             if(contact.gender == 'male'){
-                li.innerHTML = `
+                p.innerHTML = `
                 <div>
-                    <div class="w-64 rounded overflow-hidden shadow-lg">
-                        <img class="w-full" src="./images/man-grey.png" alt="Profile picture">
-                        <div class="px-6 py-4 ">
-                            <h1> ${contact.name} </h1>
-                            <h3> ${contact.gender} </h3>
-                            <h2> ${contact.company} </h2>
-                            <p> ${contact.notes} </p>
-                            ${contact.email} |
-                            <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a>                
-                        </div>
+                <div class="w-64 rounded overflow-hidden shadow-lg">
+                    <img class="w-max h-64" src="./images/man-grey.png" alt="Profile picture">
+                    <div class="px-6 py-4 ">
+                        <h2> ${contact.name} </h2>
+                        <h3><u>Works at:</u>  ${contact.company} </h3>
+                        <p><u>Mobil:</u>  ${contact.phone} </p> 
+                        <p><u>Email:</u> ${contact.email}</p>
+                        <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>                
+                        <p><u>About him:</u> ${contact.notes} </p>
                     </div>
                 </div>
-                `
-            } else if ( contact.gender == "female" ) {
-                    li.innerHTML = `
-                    <div>
-                        <div class="w-64 rounded overflow-hidden shadow-lg">
-                            <img class="w-full" src="./images/woman-grey.png" alt="Profile picture">
-                            <div class="px-6 py-4 ">
-                                <h1> ${contact.name} </h1>
-                                <h3> ${contact.gender} </h3>
-                                <h2> ${contact.company} </h2>
-                                <p> ${contact.notes} </p>
-                                ${contact.email} |
-                                <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a>                
-                            </div>
-                        </div>
+            </div>
+            `
+        } else if ( contact.gender == "female" ) {
+            p.innerHTML = `
+            <div>
+                <div class="w-64 rounded overflow-hidden shadow-lg">
+                    <img class="w-max h-64" src="./images/woman-grey.png" alt="Profile picture">
+                    <div class="px-6 py-4 ">
+                        <h2> ${contact.name} </h2>
+                        <h3><u>Works at:</u>  ${contact.company} </h3>
+                        <p><u>Mobil:</u>  ${contact.phone} </p> 
+                        <p><u>Email:</u> ${contact.email}</p>
+                        <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>                
+                        <p><u>About hem:</u> ${contact.notes} </p>
                     </div>
-                `
+                </div>
+            </div>
+            `
             }
-            div.appendChild(li)
+            div.appendChild(p)
         })
-        //div.appendChild(ul)
     } else{
         div.innerHTML = '<p> You have no contacts in your address book </p>'
     }
