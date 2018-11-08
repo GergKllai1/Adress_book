@@ -15,6 +15,7 @@
     "cucumber": "^5.0.2",
     "puppeteer": "^1.10.0",
     "superstatic": "^6.0.3",
+    "tailwindcss": "^0.7.2",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "wepack": "^0.0.1"

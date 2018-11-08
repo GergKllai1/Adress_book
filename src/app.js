@@ -63,5 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderContacts()
         addContactForm.reset()
     })
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.parallax');
+    let instances = M.Parallax.init(elems, options);
+    });
+    
 })
 
