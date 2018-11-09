@@ -29,3 +29,7 @@ Then('I should have {int} contact in my address book', async function(contactCou
 Then('I should not see {string}', async function (content) {
     return await this.pageDoesNotHaveTextContent(content)
 })
+
+When('I select {string}', async function (gender) {
+    return await this.checkGender(gender)
+})

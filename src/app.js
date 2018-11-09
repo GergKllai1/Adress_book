@@ -1,4 +1,5 @@
 const renderContacts = () => {
+    console.log('I am being rendered')
     const storage = window.localStorage
     const contacts = JSON.parse(storage.getItem('contacts'))
     let div = document.querySelector('.contentt')
@@ -7,11 +8,11 @@ const renderContacts = () => {
         div.innerHTML = ''
         contacts.forEach(contact => {
             let p = document.createElement('p')
-            if(contact.gender == 'male'){
+            if(contact.gender == 'Male'){
                 p.innerHTML = `
                 <div class="rounded-lg">
                 <div class="w-64  rounded overflow-hidden shadow-lg flex flex-col justify-around">
-                    <img class="w-32 h-32 self-end" src="./images/man-grey.png" alt="Profile picture">
+                    <img class="w-32 h-32 self-center" src="./images/man-grey.png" alt="Profile picture">
                     <div class="px-6 py-4 ">
                         <h2> ${contact.name} </h2>
                         <h4><u>Works at:</u>  </h4>
@@ -27,11 +28,11 @@ const renderContacts = () => {
                 </div>
             </div>
             `
-        } else if ( contact.gender == "female" ) {
+        } else if ( contact.gender == "Female" ) {
             p.innerHTML = `
             <div>
             <div class="w-64  rounded overflow-hidden shadow-lg flex flex-col justify-around">
-                <img class="w-32 h-31 self-end" src="./images/woman-grey.png" alt="Profile picture">
+                <img class="w-32 h-31 self-center" src="./images/woman-grey.png" alt="Profile picture">
                 <div class="px-6 py-4 ">
                     <h2> ${contact.name} </h2>
                     <h4><u>Works at:</u>  </h4>
