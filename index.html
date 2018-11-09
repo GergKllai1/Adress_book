@@ -14,10 +14,12 @@
 <body> 
 
     <script src="./dist/bundle.js"></script>
-    <div class="flex">
-        <form class = 'new-contact-form flex flex-col justify-start items-start border w-1/6' action="#">
-            <h1>Contacts</h1>
+    <div class>
+        <h1>Contacts</h1>
             <img src="./images/people.png" alt="No image" srcset="" width="200" height="150" class="self-auto">
+    </div>
+    <div>
+        <form class = 'new-contact-form flex flex-col justify-start items-start w-1/6' action="#">
             <label for="name">Name</label>
             <input class='border bg-grey rounded-r-full' id="contact-name" name="name" type="text">
             <label for="name">Gender</label>
@@ -38,9 +40,7 @@
             <br>
             <input class ="save-contact bg-grey rounded-r-full" type="submit", value="save contact">
         </form>
-        <div>
-            <div class ="contentt flex flex-inline content-center border flex-wrap"></div>
-        </div>
+        <div class ="contentt flex content-between flex-wrap rounded-lg"></div>
 </div>
     
 </body>

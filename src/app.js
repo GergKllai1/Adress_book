@@ -9,16 +9,20 @@ const renderContacts = () => {
             let p = document.createElement('p')
             if(contact.gender == 'male'){
                 p.innerHTML = `
-                <div>
-                <div class="w-64 rounded overflow-hidden shadow-lg">
-                    <img class="w-max h-64" src="./images/man-grey.png" alt="Profile picture">
+                <div class="rounded-lg">
+                <div class="w-64  rounded overflow-hidden shadow-lg flex flex-col justify-around">
+                    <img class="w-32 h-32 self-end" src="./images/man-grey.png" alt="Profile picture">
                     <div class="px-6 py-4 ">
                         <h2> ${contact.name} </h2>
-                        <h3><u>Works at:</u>  ${contact.company} </h3>
+                        <h4><u>Works at:</u>  </h4>
+                        <h4 class="h-12 overflow-auto">${contact.company} </h4>
+                        <br>
                         <p><u>Mobil:</u>  ${contact.phone} </p> 
                         <p><u>Email:</u> ${contact.email}</p>
-                        <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>                
-                        <p><u>About him:</u> ${contact.notes} </p>
+                        <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>
+                        <br>
+                        <p><u>About him:</u></p>                 
+                        <p class="h-16 overflow-auto">${contact.notes} </p>
                     </div>
                 </div>
             </div>
@@ -26,18 +30,22 @@ const renderContacts = () => {
         } else if ( contact.gender == "female" ) {
             p.innerHTML = `
             <div>
-                <div class="w-64 rounded overflow-hidden shadow-lg">
-                    <img class="w-max h-64" src="./images/woman-grey.png" alt="Profile picture">
-                    <div class="px-6 py-4 ">
-                        <h2> ${contact.name} </h2>
-                        <h3><u>Works at:</u>  ${contact.company} </h3>
-                        <p><u>Mobil:</u>  ${contact.phone} </p> 
-                        <p><u>Email:</u> ${contact.email}</p>
-                        <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>                
-                        <p><u>About hem:</u> ${contact.notes} </p>
-                    </div>
+            <div class="w-64  rounded overflow-hidden shadow-lg flex flex-col justify-around">
+                <img class="w-32 h-31 self-end" src="./images/woman-grey.png" alt="Profile picture">
+                <div class="px-6 py-4 ">
+                    <h2> ${contact.name} </h2>
+                    <h4><u>Works at:</u>  </h4>
+                    <h4 class="h-12 overflow-auto">${contact.company} </h4>
+                    <br>
+                    <p><u>Mobil:</u>  ${contact.phone} </p> 
+                    <p><u>Email:</u> ${contact.email}</p>
+                    <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>
+                    <br>
+                    <p><u>About her:</u></p>                 
+                    <p class="h-16 overflow-auto">${contact.notes} </p>
                 </div>
             </div>
+        </div>
             `
             }
             div.appendChild(p)
