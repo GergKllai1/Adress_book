@@ -17,6 +17,7 @@ class AddressBookWorld{
     }
 
     async pageHasTextContent(expectedContent){
+        console.log("content: ", expectedContent)
         const pageContent = await this.page.content()
         const actualContent = pageContent.match(expectedContent)[0]
 
@@ -63,6 +64,12 @@ class AddressBookWorld{
 
         )
         expect(actualCount).to.be.eq(expectedCount)
+    }
+
+    async checkGender(gender){
+        const inputSelector = '#contact-gender'
+        await this.page.waitForSelector(inputSelector)
+        await this.page.select(inputSelector, gender)
     }
 }
 

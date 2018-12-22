@@ -1,43 +1,56 @@
 const renderContacts = () => {
+    console.log('I am being rendered')
     const storage = window.localStorage
     const contacts = JSON.parse(storage.getItem('contacts'))
-    let div = document.querySelector('.contact-list')
+    let div = document.querySelector('.contentt')
 
     if(contacts){
         div.innerHTML = ''
-        const ul = document.createElement('p')
         contacts.forEach(contact => {
-            let li = document.createElement('p')
-            if(contact.gender == 'male'){
-                li.innerHTML = `
-                    <div class="content">
-                        <img src = "./images/image1.png" height = "100px" width = "100px"/>
-                        <h1> ${contact.name} </h1>
-                        <h3> ${contact.gender} </h3>
-                        <h2> ${contact.company} </h2>
-                        <p> ${contact.notes} </p>
-                        ${contact.email} |
-                        <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a>                
+            let p = document.createElement('p')
+            if(contact.gender == 'Male'){
+                p.innerHTML = `
+                <div class="rounded-lg">
+                <div class="w-64  rounded overflow-hidden shadow-lg flex flex-col justify-around">
+                    <img class="w-32 h-32 self-center" src="./images/man-grey.png" alt="Profile picture">
+                    <div class="px-6 py-4 ">
+                        <h2> ${contact.name} </h2>
+                        <h4><u>Works at:</u>  </h4>
+                        <h4 class="h-12 overflow-auto">${contact.company} </h4>
+                        <br>
+                        <p><u>Mobil:</u>  ${contact.phone} </p> 
+                        <p><u>Email:</u> ${contact.email}</p>
+                        <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>
+                        <br>
+                        <p><u>About him:</u></p>                 
+                        <p class="h-16 overflow-auto">${contact.notes} </p>
                     </div>
                 </div>
-                `
-            } else if ( contact.gender == "female" ) {
-                    li.innerHTML = `
-                    <div class="content">
-                        <img src = "./images/image2.png" height = "100px" width = "100px"/>
-                        <h1> ${contact.name} </h1>
-                        <h3> ${contact.gender} </h3>
-                        <h2> ${contact.company} </h2>
-                        <p> ${contact.notes} </p>
-                        ${contact.email} |
-                        <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a>                
-                    </div>
+            </div>
+            `
+        } else if ( contact.gender == "Female" ) {
+            p.innerHTML = `
+            <div>
+            <div class="w-64  rounded overflow-hidden shadow-lg flex flex-col justify-around">
+                <img class="w-32 h-31 self-center" src="./images/woman-grey.png" alt="Profile picture">
+                <div class="px-6 py-4 ">
+                    <h2> ${contact.name} </h2>
+                    <h4><u>Works at:</u>  </h4>
+                    <h4 class="h-12 overflow-auto">${contact.company} </h4>
+                    <br>
+                    <p><u>Mobil:</u>  ${contact.phone} </p> 
+                    <p><u>Email:</u> ${contact.email}</p>
+                    <p><u>Twitter:</u> <a href ="https://www.twitter.com/${contact.twitter}">@${contact.twitter}</a></p>
+                    <br>
+                    <p><u>About her:</u></p>                 
+                    <p class="h-16 overflow-auto">${contact.notes} </p>
                 </div>
-                `
+            </div>
+        </div>
+            `
             }
-            ul.appendChild(li)
+            div.appendChild(p)
         })
-        div.appendChild(ul)
     } else{
         div.innerHTML = '<p> You have no contacts in your address book </p>'
     }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .new-contact-form{
     display:flex;
     flex-direction:column;
@@ -21,3 +22,25 @@ p {
     align-items: center;
 
 }
+=======
+html {
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top, center bottom;
+    font-family: 'Open Sans Condensed', "sans-serif";
+    font-size: 90%;
+    background-image: url(images/skyline.jpg), url(images/skyline_2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat, repeat;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    min-width: 1265px;
+    letter-spacing: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+>>>>>>> 5062925356c9fc5a8194ec14973e6f38a0e3ac85
